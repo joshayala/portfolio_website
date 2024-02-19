@@ -1,0 +1,59 @@
+body {
+    background: #FFFFE4;
+    color: #253A53;
+    padding: 0 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+#myName {
+    display: inline-flex;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #253A53;
+    width: 100%;
+}
+nav {
+    display: flex;
+    top: 0;
+}
+
+.nav_links {
+    display: flex;
+    padding: 0;
+    width: 75%;
+    align-items: center;
+    list-style-type: none;
+    justify-content: flex-end;
+
+}
+
+.nav_links li {
+    float: right;
+    display: block;
+    margin-inline-start: 1rem;
+    text-decoration: none;
+    padding: 5px;
+    justify-content: flex-end;
+    font-weight: 700;
+
+}
+
+
+h2 {
+    font-size: 3rem;
+}
+
+
+.bio {
+    display: flex;
+}
+
+#josh_headshot {
+    width: 320px;
+    height: auto;
+    border-radius: 50px;
+    margin-inline-end: 4rem;
+}
