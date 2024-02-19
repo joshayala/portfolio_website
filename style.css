@@ -57,3 +57,68 @@ h2 {
     border-radius: 50px;
     margin-inline-end: 4rem;
 }
+
+@media (max-width: 1024px) {
+    .bio{
+        flex-direction: column;
+        
+    }
+    .bio #josh_headshot {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
+
+.work {
+    padding-block-end: 3rem;
+}
+
+article {
+    display: flex;
+}
+
+#Madlib {
+    display: flex;
+    width: 520px;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    article {
+        flex-direction: column;
+    }
+    article #Madlib{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+}
+
+footer{
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer ul {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 8%;
+}
+
+footer a {
+    display: inline-flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 700;
+    align-items: center;
+}
