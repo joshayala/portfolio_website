@@ -1,18 +1,38 @@
 body {
-    background: #FFFFE4;
-    color: #253A53;
+    background: var(--background);
+    color: var(--primary);
     padding: 0 1rem;
     font-family: Arial, Helvetica, sans-serif;
     max-width: 1024px;
     margin: 0 auto;
     box-sizing: border-box;
+
+        /*The CSS Color Variables*/
+    --dark-background: #253a53;
+    --dark-primary: #FFFFE4;
+    
+    --light-background: #FFFFE4;
+    --light-primary: #253a53;
+
+    --background: var(--light-background);
+    --primary: var(--light-primary);
+
 }
+body a:hover {
+    font-size: 1.1rem;
+    transition: font-size .1s;
+}
+hr{
+    color: var(--primary);
+}
+
+/* NAV BAR */
 
 #myName {
     display: inline-flex;
     font-size: 2rem;
     text-decoration: none;
-    color: #253A53;
+    color: var(--primary);
     width: 100%;
 }
 nav {
@@ -38,10 +58,61 @@ nav {
     padding: 5px;
     justify-content: flex-end;
     font-weight: 700;
+}
 
+li a{
+    color: var(--primary);
+    text-decoration: none;
 }
 
 
+
+/* DARK MODE SWITCH */
+.switch {
+    display: flex;
+    justify-content: end;
+    padding: 1 rem 0;
+}
+
+.dark-mode {
+    display: inline-flex;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: .875rem;
+    cursor: pointer;
+}
+
+.switch-border {
+    display: inline-flex;
+    align-items: center;
+    width: 60px;
+    height: 36px;
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin-inline-start: 8px;
+}
+
+.dark-mode input {
+    display: none;
+}
+
+.switch-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--primary);
+    transform: translate3d(3px, 0, 0);
+    transition: transform .1s ease-in-out;
+}
+
+.dark-mode input:checked + * .switch-dot{
+    transform: translate3d(26px, 0, 0);
+}
+
+
+/* BIO */
 h2 {
     font-size: 3rem;
 }
@@ -63,20 +134,30 @@ h2 {
         flex-direction: column;
         
     }
+    h2 {
+        font-size: 2.7rem;
+    }
     .bio #josh_headshot {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 50%;
+        width: 45%;
     }
 }
 
+
+/* WORK SECTION */
 .work {
     padding-block-end: 3rem;
 }
 
 article {
     display: flex;
+}
+
+.work a {
+    color: var(--primary);
+    font-weight: 700;
 }
 
 #Madlib {
@@ -97,6 +178,8 @@ article {
     }
 }
 
+
+/* FOOTER SECTION */
 footer{
     padding: 1rem 0;
     text-align: center;
@@ -121,4 +204,5 @@ footer a {
     font-family: sans-serif;
     font-weight: 700;
     align-items: center;
+    color: var(--primary);
 }
