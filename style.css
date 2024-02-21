@@ -117,9 +117,13 @@ h2 {
     font-size: 3rem;
 }
 
+.bio p{
+    font-size: 1.2em;
+}
 
 .bio {
     display: flex;
+    margin-bottom: 35px;
 }
 
 #josh_headshot {
@@ -164,6 +168,25 @@ article {
     display: flex;
     width: 520px;
     height: auto;
+}
+
+/*SKILLS CONTAINER*/
+
+.skills {
+    justify-items: center;
+}
+
+.skills-container{
+    font-size: 2.2em;
+    height: auto;
+    margin-bottom: 30px;
+    display: flex;
+}
+
+.skills-container i {
+    width: 1em;
+    -webkit-font-smoothing: antialiased;
+    margin: auto auto;
 }
 
 @media (max-width: 1024px) {
