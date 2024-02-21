@@ -28,36 +28,41 @@ hr{
 
 /* NAV BAR */
 
-#myName {
-    display: inline-flex;
-    font-size: 2rem;
-    text-decoration: none;
-    color: var(--primary);
-    width: 100%;
-}
 nav {
     display: flex;
     top: 0;
+    justify-content: space-between
+}
+#myName {
+    display: inline;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--primary);
+    width: 100%;
+    align-items: center;
+}
+#myName h1{
+    justify-content: center;
+    font-weight: 700;
 }
 
-.nav_links {
+nav ul{
     display: flex;
-    padding: 0;
-    width: 75%;
     align-items: center;
     list-style-type: none;
-    justify-content: flex-end;
-
+    justify-items: end;
+    padding: 0;
+    justify-content: space-evenly;
 }
 
-.nav_links li {
+nav li {
+    display: inline;
     float: right;
-    display: block;
-    margin-inline-start: 1rem;
     text-decoration: none;
-    padding: 5px;
-    justify-content: flex-end;
-    font-weight: 700;
+    font-weight: 750;
+    align-items: center;
+    margin-inline-end: 1px;
+    margin: 4px;
 }
 
 li a{
@@ -199,6 +204,7 @@ article {
         margin-right: auto;
         width: 75%;
     }
+    .skills
 }
 
 
