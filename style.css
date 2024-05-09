@@ -160,6 +160,17 @@ h2 {
     padding-block-end: 3rem;
 }
 
+.work h2{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.breakdots {
+    text-align: center;
+    justify-items: center;
+    margin: 0;
+}
+
 article {
     display: flex;
     padding: 20px 0px;
@@ -217,7 +228,9 @@ h4 {
         margin-right: auto;
         width: 75%;
     }
-    .skills
+    .skills-container {
+        font-size: 25px;
+    }
 }
 
 
