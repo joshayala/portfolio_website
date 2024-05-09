@@ -162,6 +162,15 @@ h2 {
 
 article {
     display: flex;
+    padding: 20px 0px;
+    align-items: center;
+}
+
+.imgonright {
+    padding-right: 15px;
+}
+.imgonleft {
+    padding-left: 15px;
 }
 
 .work a {
@@ -173,6 +182,10 @@ article {
     display: flex;
     width: 520px;
     height: auto;
+}
+
+h4 {
+    font-style: italic;
 }
 
 /*SKILLS CONTAINER*/
