@@ -206,50 +206,47 @@ h4 {
 
 /*TECHNOLOGIES CONTAINER*/
 
-/* Styling for the technologies section */
 .technologies {
-    background-color: var(--background); /* Light grey background for contrast */
-    padding: 40px 20px; /* Add padding for spacing */
-    border-radius: 8px; /* Rounded corners for a modern look */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
-    margin: 20px auto; /* Center the section and add margin */
-    max-width: 800px; /* Limit the width to keep content readable */
+    background-color: var(--background); 
+    padding: 40px 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    margin: 20px auto; 
+    max-width: 800px; 
 }
 
-/* Styling for the section heading */
+
 .technologies h2 {
-    font-size: 2rem; /* Larger font size for emphasis */
-    color: var(--primary); /* Dark grey color for text */
-    margin-bottom: 20px; /* Space below the heading */
-    text-align: center; /* Center align the heading text */
-    font-family: 'Arial', sans-serif; /* Clean and modern font */
+    font-size: 2rem; 
+    color: var(--primary); 
+    margin-bottom: 20px; 
+    text-align: center; 
+    font-family: 'Arial', sans-serif; 
 }
 
-/* Styling for the technologies list container */
+
 .technologieslist {
-    padding: 0; /* Remove default padding */
+    padding: 0; 
 }
 
-/* Styling for the unordered list */
 .technologieslist ul {
-    list-style-type: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
+    list-style-type: none; 
+    padding: 0; 
 }
 
-/* Styling for each list item */
 .technologieslist li {
-    font-size: 1.2rem; /* Slightly larger font size */
-    color: var(--primary); /* Medium grey color for text */
-    margin-bottom: 10px; /* Space between items */
-    padding: 8px; /* Add padding for better spacing */
-    border-bottom: 1px solid #ddd; /* Light border for separation */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    font-size: 1.2rem; 
+    color: var(--primary); 
+    margin-bottom: 10px; 
+    padding: 8px; 
+    border-bottom: 1px solid #ddd; 
+    transition: background-color 0.3s; 
 }
 
-/* Hover effect for list items */
+
 .technologieslist li:hover {
-    background-color: #e0e0e0; /* Light grey background on hover */
-    cursor: pointer; /* Change cursor to pointer */
+    background-color: #e0e0e0; 
+    cursor: pointer; 
 }
 
 
@@ -272,6 +269,10 @@ h4 {
 }
 
 /* CERTIFICATION SECTION */
+.ccfrontend {
+    padding: 15px 0px;
+}
+
 .ccfrontend img{
     display: block;
     margin-left: auto;
