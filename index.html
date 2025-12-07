@@ -1,184 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark:bg-neutral-950 bg-white dark:text-neutral-100 text-neutral-900">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1" >
-    <link href="./style.css" rel="stylesheet">
-    <link rel="icon" href="./images/apple-touch-icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <title>Joshua Ayala Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind Dark Mode – follow system preference
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      if (e.matches) document.documentElement.classList.add('dark');
+      else document.documentElement.classList.remove('dark');
+    });
+  </script>
+
+  <style>
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.9s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <title>Joshua Ayala • Portfolio</title>
+  <!-- Add Icon here -->
+  <link rel="icon" href="./images/apple-touch-icon-new.png" />
 </head>
-<body>
 
-    <!--The Nav Bar -->
-    <nav>
-        <div class="nameholder">
-            <h1><a id="myName" href="./index.html">Joshua Ayala</a></h1>
-        </div>
-            <ul class="nav_links">
-                <li><a href="#bio">Bio</a></li>
-                <li><a href="#work">Work</a></li>
-                <!-- <li><a href="#">Resume</a></li> -->
-                <li><a href="#technologies">Technologies</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+<body class="font-sans tracking-tight fade-in">
+
+  <!-- Header -->
+  <header class="max-w-4xl mx-auto py-10 px-4 flex justify-between items-center">
+    <h1 class="text-xl font-semibold">Joshua Ayala</h1>
+    <nav class="flex gap-6 text-sm">
+      <a href="#bio" class="hover:opacity-70">Bio</a>
+      <a href="#work" class="hover:opacity-70">Work</a>
+      <a href="#tech" class="hover:opacity-70">Tech</a>
+      <a href="#contact" class="hover:opacity-70">Contact</a>
     </nav>
-    <hr>
+  </header>
 
-    <!--The Dark Mode Switch-->
-    <div class="switch">
-        <label class="dark-mode">Dark Mode 
-            <input type="checkbox" id="dark-mode-toggle">
-            <div class="switch-border">
-                <div class="switch-dot"></div>
+  <main class="max-w-4xl mx-auto px-4">
+
+    <!-- Bio -->
+    <section id="bio" class="py-16 grid sm:grid-cols-2 gap-10 items-center fade-in">
+      <img src="./images/D82A7956.JPG" alt="Joshua" class="w-60 mx-auto md:w-full rounded-2xl object-cover shadow-lg" />
+      <div>
+        <h2 id="greeting" class="text-4xl font-bold mb-4">Good Morning</h2>
+        <p class="opacity-80 leading-relaxed">
+          I'm a front-end engineer, WordPress theme and plugin developer, photographer, and musician. I love building and maintaining clean,
+          intuitive interfaces and meaningful user experiences. I'm currently working on building a job board by leveraging
+          Laravel and PHP technologies. Based in Atlanta, GA.
+        </p>
+      </div>
+    </section>
+
+    <hr class="border-neutral-300 dark:border-neutral-800 my-12" />
+
+    <!-- Work -->
+    <section id="work" class="py-16 fade-in">
+      <h2 class="text-3xl font-bold mb-10">Work</h2>
+
+      <!-- GRID LAYOUT -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        <!-- Project 1 -->
+        <div class="rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow p-4 bg-white dark:bg-neutral-900">
+          <div class="relative">
+            <img src="images/job_board.png" class="rounded-lg mb-4 opacity-60 blur-sm" />
+            <div class="absolute inset-0 flex items-center justify-center bg-neutral-900/30 backdrop-blur-sm rounded-lg">
+              <span class="text-sm font-semibold bg-neutral-100 dark:bg-neutral-800 px-3 py-1 rounded-full">Coming Soon</span>
             </div>
-        </label>
-    </div>
-
-    <!--The Main Body-->
-
-    <main>
-        <!--The Bio Section-->
-        <section class="bio" id="bio">
-            <img id="josh_headshot" src="./images/D82A7956.JPG" alt="Photo of Joshua">
-            <div>
-                <h2>Hi! My name is Joshua Ayala. I am a front-end web developer.</h2>
-                <p>I have been coding since winter of 2023. I am a graduate of CodeCademy's Front-End Engineer
-                    Career Path. I have experience in web design (HTML, CSS, JS, React.js, Redux and TypeScript). I am based out of Atlanta, Georgia. 
-                    In my free time I love to play guitar, cook, shoot film, fish, and travel.
-                </p>
+          </div>
+          <h3 class="text-lg font-semibold mb-1 flex items-center gap-2">
+            Job Board Site
+            <span
+              class="text-xs px-2 py-1 rounded-full bg-yellow-300 text-yellow-900 dark:bg-yellow-600 dark:text-neutral-900">In
+              Progress</span>
+          </h3>
+          <p class="text-sm opacity-70 mb-4">Laravel • SQLite • Vite</p>
+          <div class="flex gap-4 text-blue-600 dark:text-blue-400 text-sm font-medium opacity-70">
+            <!-- <a href="#" class="hover:underline pointer-events-none">Live</a>
+                      <a href="#" class="hover:underline pointer-events-none">GitHub</a> -->
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow p-4 bg-white dark:bg-neutral-900">
+          <img src="images/fauxReddit.png" class="rounded-lg mb-4" />
+          <h3 class="text-lg font-semibold mb-1">Reddit Clone</h3>
+          <p class="text-sm opacity-70 mb-4">React.js • Redux Toolkit • Reddit API</p>
+          <div class="flex gap-4 text-blue-600 dark:text-blue-400 text-sm font-medium">
+            <a href="https://fauxreddit.netlify.app" target="_blank" class="hover:underline">Live</a>
+            <a href="https://github.com/joshayala/fauxReddit" target="_blank" class="hover:underline">GitHub</a>
+          </div>
+        </div>
+          <!-- Project 3 (Work in Progress) -->
+          <div class="rounded-xl overflow-hidden shadow hover:shadow-lg transition-shadow p-4 bg-white dark:bg-neutral-900">
+            <img src="images/appointment_planner.png" class="rounded-lg mb-4" />
+            <h3 class="text-lg font-semibold mb-1">Appointment Planner App</h3>
+            <p class="text-sm opacity-70 mb-4">React Router • SPA</p>
+            <div class="flex gap-4 text-blue-600 dark:text-blue-400 text-sm font-medium">
+              <a href="https://appointmentplanner-ja.netlify.app/" target="_blank" class="hover:underline">Live</a>
+              <a href="https://github.com/joshayala/appointment_planner" target="_blank" class="hover:underline">GitHub</a>
             </div>
-        </section>
-        <hr>
-        <section class="work" id="work">
-            <h2>Recent Projects</h2>
+          </div>
 
-                <article>
-                    <a href="https://fauxreddit.netlify.app" target="_blank"><img id="Madlib" src="images/fauxReddit.png" alt="Image of fauxReddit App"></a>
-                    <div class="imgonleft">
-                        <h3>Reddit Clone with React.js, Redux Toolkit and the Reddit JSON API</h3>
-                        <h4>'fauxReddit'</h4>
-                        <p>An interactive React based SPA with the goal of providing users the ability to browse Reddit's content. Users can view 
-                            subreddits, comments, rate posts, and search for any posts of interest. 
-                        </p>
-                        <strong>August 2024</strong>
-                        <ul>
-                            <li>Use of HTML, CSS, JavaScript, React.js, Redux and Redux Toolkit, HTTP Requests, and Npm Technologies</li>
-                            <li>Designed to be operated from a web browser</li>
-                        </ul>
-                        <p>Try out the <a href="https://fauxreddit.netlify.app" target="_blank">fauxReddit App here!</a></p>
-                        <p>Visit the <a href="https://github.com/joshayala/fauxReddit" target="_blank">GitHub Repo</a> for this project!</p>
-                    </div>
-                </article>
+        </div>
+    </section>
 
-                <p class="breakdots"> . . . </p>
+    <hr class="border-neutral-300 dark:border-neutral-800 my-12" />
 
-                <article>
-                    <div class="imgonright">
-                        <h3>Contacts and Appointments Manager Web App with React Router</h3>
-                        <h4>'Appointment Planner'</h4>
-                        <p>A functional React based SPA with routes that allow users to navigate between contacts and appointments made. </p>
-                        <strong>May 2024</strong>
-                        <ul>
-                            <li>Use of HTML, CSS, JavaScript, React.js, React Router, and Npm Technologies</li>
-                            <li>Designed to be operated from a web browser</li>
-                        </ul>
-                        <p>Try out the <a href="https://appointmentplanner-ja.netlify.app/" target="_blank">Appointment Planner App here!</a></p>
-                        <p>Visit the <a href="https://github.com/joshayala/appointment_planner" target="_blank">GitHub Repo</a> for this project!</p>
-                    </div>
-                    <a href="https://appointmentplanner-ja.netlify.app/" target="_blank"><img id="Madlib" src="images/appointment_planner.png" alt="Image of Appointment Planner App"></a>
-                </article>
+    <!-- Tech -->
+    <section id="tech" class="py-16 text-center fade-in">
+      <h2 class="text-3xl font-bold mb-10">Technologies</h2>
+      <div class="flex flex-wrap justify-center gap-3">
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">HTML</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">CSS</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">JavaScript</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">React.js</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">Redux</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">TypeScript</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">Git</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">WordPress</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">MySQL</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">PHP</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">Alpine.js</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">Laravel</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">SQLite</span>
+        <span class="px-4 py-2 bg-neutral-200 dark:bg-neutral-800 rounded-full text-sm">Vite</span>
+      </div>
+    </section>
 
-                <p class="breakdots"> . . . </p>
+    <hr class="border-neutral-300 dark:border-neutral-800 my-12" />
 
-                <article>
-                    <a href="https://ayalajamming.netlify.app" target="_blank"><img id="Madlib" src="images/Jamming.png" alt="Image of Jamming App"></a>
-                    <div class="imgonleft">
-                        <h3>Playlist Web App with the Spotify API</h3>
-                        <h4>'Jamming'</h4>
-                        <p>An interactive React based SPA with the goal of displaying search data effectively and uploading 
-                            playlists that users create to their own Spotify accounts.
-                        </p>
-                        <strong>May 2024</strong>
-                        <ul>
-                            <li>Use of HTML, CSS, JavaScript, React.js, and Npm Technologies</li>
-                            <li>Designed to be operated from a web browser</li>
-                        </ul>
-                        <p>Try out the <a href="https://ayalajamming.netlify.app" target="_blank">Jamming App here!</a></p>
-                        <p>Visit the <a href="https://github.com/joshayala/jamming" target="_blank">GitHub Repo</a> for this project!</p>
-                    </div>
-                </article>
-
-                <p class="breakdots"> . . . </p>
-
-                <article>
-                    <div class="imgonright">
-                        <h3>Random String Generator using Node.js</h3>
-                        <h4>'Auto Madlib'</h4>
-                        <p>A humorous message generator that randomly populates lines of code
-                            altogether in one string. </p>
-                        <strong>Feb 2024</strong>
-                        <ul>
-                            <li>Use of JavaScript and Node.js Technologies</li>
-                            <li>Designed to be operated from the Command Line</li>
-                        </ul>
-                        <p>Visit the <a href="https://github.com/joshayala/mixedMessages" target="_blank">GitHub Repo</a> for this project!</p>
-                    </div>
-                    <img id="Madlib" src="images/Auto MadLib.png" alt="Image of Auto Madlib Generator">
-                </article>
-
-        </section>
-        <hr>
-
-        <!--Technologies Section-->
-        <section class="technologies" id="technologies">
-            <h2>Technologies</h2>
-            <div class="technologieslist">
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Git & GitHub</li>
-                    <li>Web Design</li>
-                    <li>React.js</li>
-                    <li>Redux</li>
-                    <li>Build Tools & SEO</li>
-                    <li>Data Structures</li>
-                    <li>Algorithms</li>
-                    <li>TypeScript</li>
-                </ul>
-            
-            </div>
-        </section>
-    </main>
-    <hr>
-
-        <section class="certification">
-            <h2>Certifications</h2>
-                <div class="ccfrontend">
-                    <img src="./images/frontendengineercertificate.png" />
-                    <h3>CodeCademy's Front-End Engineer Certificate</h3>
-                    <h4>August 2024</h4>
-                </div>
-              
-                <div class="ccfrontend">
-                    <img src="./images/learntypescriptcoursecertificate2.jpg" />
-                    <h3>CodeCademy's Learn TypeScript Course Certificate</h3>
-                    <h4>September 2024</h4>
-                </div>
-
-        </section>
-
-    <hr>
-
-    <!--Footer Section-->
-    <footer class="contact" id="contact">
-        <ul>
-            <li><a href="https://www.linkedin.com/in/joshua-ayala-a926b7254/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/joshayala" target="_blank">GitHub</a></li>
-
-        </ul>
+    <!-- Contact -->
+    <footer id="contact" class="text-center py-16 fade-in">
+      <p class="opacity-60 mb-6">Say hello</p>
+      <div class="flex justify-center gap-10 text-blue-600 dark:text-blue-400 font-medium">
+        <a href="https://www.linkedin.com/in/joshua-ayala-a926b7254/" target="_blank"
+          class="hover:underline">LinkedIn</a>
+        <a href="https://github.com/joshayala" target="_blank" class="hover:underline">GitHub</a>
+      </div>
     </footer>
-<script src="main.js"></script>
+
+  </main>
+  <script>
+    // Dynamic Greeting
+    function setGreeting() {
+      const hour = new Date().getHours();
+      let text = "Good Evening";
+      if (hour < 12) text = "Good Morning";
+      else if (hour < 18) text = "Good Afternoon";
+      document.getElementById('greeting').textContent = text;
+    }
+    setGreeting();
+  </script>
 </body>
+
 </html>
