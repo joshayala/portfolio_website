@@ -24,7 +24,7 @@ Project has been revised to include new ongoing projects and remove other smalle
 ## How to use
 To view the website, click the follwing link:
 ```
-https://joshayala.github.io/portfolio_website/
+https://joshuaayala.com/
 ```
 
 ## Status
